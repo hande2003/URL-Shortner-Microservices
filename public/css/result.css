@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #222;
+    background-color: #fff;
+  }
+ */
+ main{
+    margin-top: auto;
+}
