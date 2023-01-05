@@ -14,7 +14,7 @@ router
             return result.postURL(req.url);
         })().then(result => {
             if(result.originalURL){
-            res.status(201).render('result', {originalURL:result.originalURL, shortURL:result.shortURL});
+            res.status(201).render('result', {originalURL:result.originalURL, shortURL:result.shortURL, header:"Success"});
             }else{
             res.status(400).render('error', {error: result})
             }
@@ -35,7 +35,7 @@ router
             return result.getURL(req.url);
         })().then(result => {
             if(result!== null){
-            res.status(200).render('result.ejs', {originalURL:result.originalURL, shortURL:result.shortURL});
+            res.status(200).render('result.ejs', {originalURL:result.originalURL, shortURL:result.shortURL, header:"Found!"});
             }else{
             res.status(400).render('error', {error: 'OOPS!! Shortened code not Found'});
             }
